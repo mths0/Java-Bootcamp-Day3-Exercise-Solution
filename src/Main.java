@@ -20,10 +20,11 @@ public class Main {
             System.out.println("welcome admin");
         } else if (role.equalsIgnoreCase("superuser")) {
             System.out.println("welcome superuser");
-        } else {
+        } else if (role.equalsIgnoreCase("user")) {
             System.out.println("welcome user");
+        } else { // add an if for user
+            System.out.println("Invalid input.");
         }
-
 
 
 //            2.Take three numbers from the user and print the greatest number.
@@ -62,10 +63,9 @@ public class Main {
 //              Expected Output: Wednesday
 
         System.out.println("\n\nQuestion 3:");
-        System.out.print("Enter a number between 1-7: ");
-        int number = scanner.nextInt();
 
-        switch (number) {
+        int randomNumber = (int) (Math.random() * 7) + 1; // use Math random
+        switch (randomNumber) {
             case 1:
                 System.out.println("Sunday");
                 break;
